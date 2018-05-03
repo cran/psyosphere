@@ -1,0 +1,32 @@
+Package: psyosphere
+Type: Package
+Title: Analyse GPS Data
+Version: 0.1.4
+Date: 2018-05-03
+Authors@R: c(
+  person("Benjamin", "Ziepert", email  = "feedback-psyosphere@analyse-gps.com", role = c("cre", "aut")),
+  person("Elze G", "Ufkes", role = "ctb"),
+  person("Peter W", "de Vries", role = "ctb"))
+Maintainer: Benjamin Ziepert <feedback-psyosphere@analyse-gps.com>
+Description: Analyse location data such as latitude,
+    longitude, and elevation. Based on spherical trigonometry, variables such as
+    speed, bearing, and distances can be calculated from moment to moment, 
+    depending on the sampling frequency of the equipment used, and independent 
+    of scale. Additionally, the package can plot tracks, coordinates, and shapes
+    on maps, and sub-tracks can be selected with point-in-polygon or other 
+    techniques. The package is optimized to support behavioural science 
+    experiments with multiple tracks. It can detect and clean up errors in the 
+    data, and resulting data can be exported to be analysed in statistical 
+    software or geographic information systems (GIS).
+Depends: R (>= 2.10)
+License: MIT + file LICENSE
+Imports: ggmap, rgdal, plyr, geosphere, ggplot2, sp, lubridate,
+        RgoogleMaps, SDMTools, stats
+RoxygenNote: 6.0.1
+NeedsCompilation: no
+Packaged: 2018-05-03 10:48:33 UTC; micro
+Author: Benjamin Ziepert [cre, aut],
+  Elze G Ufkes [ctb],
+  Peter W de Vries [ctb]
+Repository: CRAN
+Date/Publication: 2018-05-03 11:38:56 UTC

@@ -1,0 +1,31 @@
+
+year <- sub("-.*", "", meta$Date)
+version <- meta$Version
+version_note <- sprintf("R package version %s", version)
+
+url <- "https://CRAN.R-project.org/package=psyosphere"
+
+author <- c(person("Benjamin", "Ziepert", email  = "feedback-psyosphere@analyse-gps.com", role = "cre"),
+            person("Elze G", "Ufkes", role = "ctb"),
+            person("Peter W", "de Vries", role = "ctb"))
+
+type <- "Manual"
+
+citHeader("To cite the psyosphere package in publications use:")
+
+citEntry(entry        = type,
+         title        = "psyosphere: Analyse GPS Data",
+         author       = author,
+         Organization = "University of Twente",
+         address      = "Enschede, Netherlands",
+         year         = year,
+         note         = version_note,
+         url          = url,
+         textVersion =
+           paste("Ziepert, B., Ufkes, E., & Vries, P. (2018). ",
+                 "psyosphere: Analyse GPS Data. ",
+                 "University of Twente, Enschede, Netherlands, ",
+                 version_note,". ",
+                 "URL ", url,".",
+                 sep = "")
+)
