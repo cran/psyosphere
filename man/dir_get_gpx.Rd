@@ -46,7 +46,7 @@ Dr. Elze Ufkes
   \code{\link{dir_add_csv}}, \link[base]{timezones}
 }
 
-\examples{\donttest{
+\examples{\donttest{\donttest{
 gpx_dir <- system.file("extdata", package="psyosphere")
 psyo_rounds <- dir_get_gpx(gpx_dir, tz="MET")
-}}
+}}}

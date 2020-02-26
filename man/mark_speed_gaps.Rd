@@ -46,7 +46,7 @@ mark_speed_gaps(
 \seealso{
   \code{\link{mark_gap_segments}}, \code{\link{mark_time_gaps}}, \code{\link{select_gaps}}
 }
-\examples{
+\examples{\donttest{
 # Get example data
 data(psyo_rounds2)
 speedt <- psyo_rounds2[ c(1:5,11:15) ,]
@@ -68,4 +68,4 @@ speedt <- mark_speed_gaps(speedt, 8)
 
 # Advanced mean speed with speed gap
 des_mean(speedt, "speed", "time_difference", c("time_gap","speed_gap"))
-}
+}}

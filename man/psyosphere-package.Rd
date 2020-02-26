@@ -43,7 +43,7 @@
     \item{"sp" by E. Pebesma, R. Bivand, B. Rowlingson, V. Gomez-Rubio, R. Hijmans, M. Sumner, D. MacQueen, J. Lemon & J. O'Brien from cran.rstudio.com / GPL-2}
     \item{"lubridate" by G. Grolemund, V. Spinu, H. Wickham, I. Lyttle, I. Constigan, J. Law, D. Mitarotonda, J. Larmarange, J. Boiser & C. Lee from cran.rstudio.com / GPL-2}
     \item{"RgoogleMaps" by M. Loecher from cran.rstudio.com / GPL}
-    \item{"SDMTools" by J. VanDerWal, L. Falconi, S. Januchowski, L. Shoo & C. Storlie from cran.rstudio.com / GPL-3}
+    \item{"Hmisc" by Frank E Harrell Jr, with contributions from Charles Dupont and many others from cran.rstudio.com / GPL-3}
 
   }
 }

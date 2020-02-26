@@ -50,7 +50,7 @@ Data frame
   \code{\link{des_summary}}, \code{\link{des_duplicates}}, \code{\link{des_first}}, \code{\link{des_last}}, \code{\link{des_length}}, \code{\link{des_min}}, \code{\link{des_mean}}, \code{\link{des_sd}}, \code{\link{des_sum}}
 }
 
-\examples{
+\examples{\donttest{
 data(psyo_rounds2)
 last_time <- des_max(psyo_rounds2,"time")
-}
+}}

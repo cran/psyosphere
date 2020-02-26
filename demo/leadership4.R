@@ -12,42 +12,44 @@ demo_dir <- tempdir()
 
 # Reset Environment
 
-dir <- paste0(demo_dir,"/leadership4/")
+if (!exists("p_dir")) {
+  p_dir <- paste0(demo_dir,"/leadership4/")
+}
 
-rm(list=setdiff(ls(), "dir"))
+rm(list=setdiff(ls(), "p_dir"))
 library(psyosphere)
 
 # Check directories
-dir.create(dir, showWarnings = FALSE)
-dir.create(paste0(dir,"rdata"), showWarnings = FALSE)
-dir.create(paste0(dir,"plots"), showWarnings = FALSE)
-dir.create(paste0(dir,"gps_files"), showWarnings = FALSE)
+dir.create(p_dir, showWarnings = FALSE)
+dir.create(paste0(p_dir, "/rdata"), showWarnings = FALSE)
+dir.create(paste0(p_dir, "/plots"), showWarnings = FALSE)
+dir.create(paste0(p_dir, "/gps_files"), showWarnings = FALSE)
 
 # 02 Download and unzip files --------------------------------------------------
 
 url <- "https://analyse-gps.com/downloads/leadership4.zip"
-download.file(url = url, destfile = paste0(dir, "/gps_files.zip"))
-unzip(paste0(dir, "/gps_files.zip"), exdir = paste0(dir, "/gps_files"))
+download.file(url = url, destfile = paste0(p_dir, "/gps_files.zip"))
+unzip(paste0(p_dir, "/gps_files.zip"), exdir = paste0(p_dir, "/gps_files"))
 remove(url)
 
 # 03 Store GPX files in data frame ---------------------------------------------
 
-rm(list=setdiff(ls(), "dir"))
+rm(list=setdiff(ls(), "p_dir"))
 
-tracks <- dir_get_gpx(paste0(dir, "/gps_files"))
+tracks <- dir_get_gpx(paste0(p_dir, "/gps_files"))
 
-save.image(paste0(dir, "/rdata/03.RData"))
+save(list = setdiff(ls(), "p_dir"), file = paste0(p_dir, "/rdata/03.RData"))
 
 # 04 Save all plots ------------------------------------------------------------
 
-rm(list=setdiff(ls(), "dir"))
-load(paste0(dir, "/rdata/03.RData"))
+rm(list=setdiff(ls(), "p_dir"))
+load(paste0(p_dir, "/rdata/03.RData"))
 
 # The plots are generated to give you an idea how the data look like. You can
 # check the plots in the plots folder in this directory.
 
 plot_tracks(
-  tracks, single = FALSE, save_dir = paste0(dir, "/plots/all")
+  tracks, single = FALSE, save_dir = paste0(p_dir, "/plots/all")
 )
 
 # For each participant there are two tracks. After creating the plots it was
@@ -55,24 +57,24 @@ plot_tracks(
 # coordinates and less gaps were preferred. In the "ids.csv" in the gps_files
 # directory is noted which files were included and which were excluded.
 
-save.image(paste0(dir, "/rdata/04.RData"))
+save(list = setdiff(ls(), "p_dir"), file = paste0(p_dir, "/rdata/04.RData"))
 
 # 05 add id file info to data frame --------------------------------------------
 
-rm(list=setdiff(ls(), "dir"))
-load(paste0(dir, "/rdata/04.RData"))
+rm(list=setdiff(ls(), "p_dir"))
+load(paste0(p_dir, "/rdata/04.RData"))
 
 # The CSV stores some data about each participants that will be added to the
 # data frame.
 
-tracks <- dir_add_csv(tracks, paste0(dir, "/gps_files/ids.csv"))
+tracks <- dir_add_csv(tracks, paste0(p_dir, "/gps_files/ids.csv"))
 
-save.image(paste0(dir, "/rdata/05.RData"))
+save(list = setdiff(ls(), "p_dir"), file = paste0(p_dir, "/rdata/05.RData"))
 
 # 06 Clean-up data -------------------------------------------------------------
 
-rm(list=setdiff(ls(), "dir"))
-load(paste0(dir, "/rdata/05.RData"))
+rm(list=setdiff(ls(), "p_dir"))
+load(paste0(p_dir, "/rdata/05.RData"))
 
 # Remove partcipants that are excluded
 tracks <- tracks[ tracks[,c("include")] == 1 ,]
@@ -87,12 +89,12 @@ tracks <- average_duplicates(tracks)
 tracks <- t_time_difference(tracks)
 tracks <- mark_time_gaps(tracks)
 
-save.image(paste0(dir, "/rdata/06.RData"))
+save(list = setdiff(ls(), "p_dir"), file = paste0(p_dir, "/rdata/06.RData"))
 
 # 07 Add speed -----------------------------------------------------------------
 
-rm(list=setdiff(ls(), "dir"))
-load(paste0(dir, "/rdata/06.RData"))
+rm(list=setdiff(ls(), "p_dir"))
+load(paste0(p_dir, "/rdata/06.RData"))
 
 # Add speed
 tracks <- t_speed(tracks)
@@ -100,56 +102,56 @@ tracks <- t_speed(tracks)
 # Mark impossible speed (above 40km/h) as gaps
 tracks <- mark_speed_gaps(tracks,40)
 
-save.image(paste0(dir, "/rdata/07.RData"))
+save(list = setdiff(ls(), "p_dir"), file = paste0(p_dir, "/rdata/07.RData"))
 
 # 08 Save all plots but do not display them ------------------------------------
 
-rm(list=setdiff(ls(), "dir"))
-load(paste0(dir, "/rdata/07.RData"))
+rm(list=setdiff(ls(), "p_dir"))
+load(paste0(p_dir, "/rdata/07.RData"))
 
 # All plots are created that where included and cleaned up. All gaps are marked
 # as red lines. These gaps will be excluded from the further analysis.
 
 plot_tracks(
-  tracks, single = FALSE, save_dir = paste0(dir, "/plots"),
+  tracks, single = FALSE, save_dir = paste0(p_dir, "/plots"),
   cgaps = c("time_gap", "speed_gap")
 )
 
-save.image(paste0(dir, "/rdata/08.RData"))
+save(list = setdiff(ls(), "p_dir"), file = paste0(p_dir, "/rdata/08.RData"))
 
 # 09 Add bearing ---------------------------------------------------------------
 
 # This function will add the bearing between each point of a track.
 
-rm(list=setdiff(ls(), "dir"))
-load(paste0(dir, "/rdata/08.RData"))
+rm(list=setdiff(ls(), "p_dir"))
+load(paste0(p_dir, "/rdata/08.RData"))
 
 tracks <- t_bearing(tracks)
 
-save.image(paste0(dir, "/rdata/09.RData"))
+save(list = setdiff(ls(), "p_dir"), file = paste0(p_dir, "/rdata/09.RData"))
 
 # 10 Add distance --------------------------------------------------------------
 
-rm(list=setdiff(ls(), "dir"))
-load(paste0(dir, "/rdata/09.RData"))
+rm(list=setdiff(ls(), "p_dir"))
+load(paste0(p_dir, "/rdata/09.RData"))
 
 tracks <- t_distance(tracks)
 
-save.image(paste0(dir, "/rdata/10.RData"))
+save(list = setdiff(ls(), "p_dir"), file = paste0(p_dir, "/rdata/10.RData"))
 
 # 11 Add average distance to team mates ----------------------------------------
 
-rm(list=setdiff(ls(), "dir"))
-load(paste0(dir, "/rdata/10.RData"))
+rm(list=setdiff(ls(), "p_dir"))
+load(paste0(p_dir, "/rdata/10.RData"))
 
 tracks <- distance_peers(tracks, cpeer = "team")
 
-save.image(paste0(dir, "/rdata/11.RData"))
+save(list = setdiff(ls(), "p_dir"), file = paste0(p_dir, "/rdata/11.RData"))
 
 # 12 Add average distance to formal followers in team --------------------------
 
-rm(list=setdiff(ls(), "dir"))
-load(paste0(dir, "/rdata/11.RData"))
+rm(list=setdiff(ls(), "p_dir"))
+load(paste0(p_dir, "/rdata/11.RData"))
 
 follower_tracks <- tracks[ tracks[,c("formal_leader")] != 1  ,]
 follower_tracks <- distance_peers(
@@ -164,12 +166,12 @@ tracks <- tracks[order(tracks$id, tracks$p_id),]
 
 remove(follower_tracks, leader_tracks)
 
-save.image(paste0(dir, "/rdata/12.RData"))
+save(list = setdiff(ls(), "p_dir"), file = paste0(p_dir, "/rdata/12.RData"))
 
 # 13 Add average distance to perceived followers in team -----------------------
 
-rm(list=setdiff(ls(), "dir"))
-load(paste0(dir, "/rdata/12.RData"))
+rm(list=setdiff(ls(), "p_dir"))
+load(paste0(p_dir, "/rdata/12.RData"))
 
 follower_tracks <- tracks[ tracks[,c("perceived_leader")] != 1  ,]
 follower_tracks <- distance_peers(
@@ -185,12 +187,12 @@ tracks <- tracks[order(tracks$id, tracks$p_id),]
 
 remove(follower_tracks, leader_tracks)
 
-save.image(paste0(dir, "/rdata/13.RData"))
+save(list = setdiff(ls(), "p_dir"), file = paste0(p_dir, "/rdata/13.RData"))
 
 # 14 Create summary data frame -------------------------------------------------
 
-rm(list=setdiff(ls(), "dir"))
-load(paste0(dir, "/rdata/13.RData"))
+rm(list=setdiff(ls(), "p_dir"))
+load(paste0(p_dir, "/rdata/13.RData"))
 
 cgaps <- c("time_gap","speed_gap")
 
@@ -228,12 +230,12 @@ summary <- des_first(
   tracks, "comment", cname = "comment", des_df = summary
 )
 
-save.image(paste0(dir, "/rdata/14.RData"))
+save(list = setdiff(ls(), "p_dir"), file = paste0(p_dir, "/rdata/14.RData"))
 
 # 15 Export to excel -----------------------------------------------------------
 
-rm(list=setdiff(ls(), "dir"))
-load(paste0(dir, "/rdata/14.RData"))
+rm(list=setdiff(ls(), "p_dir"))
+load(paste0(p_dir, "/rdata/14.RData"))
 
 library(xlsx)
-xlsx::write.xlsx(summary, paste0(dir, "/leadership4.xlsx"))
+xlsx::write.xlsx(summary, paste0(p_dir, "/leadership4.xlsx"))

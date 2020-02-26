@@ -60,7 +60,7 @@ mean_private <- function(tracks, ctarget, cweight, cgaps, cname, t_id) {
 
   # Calculate weighted mean
   else {
-    result <- SDMTools::wt.mean(tracks[,ctarget],tracks[,cweight])
+    result <- Hmisc::wtd.mean(tracks[,ctarget],tracks[,cweight])
   }
 
   # Save as data frame

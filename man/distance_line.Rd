@@ -45,7 +45,7 @@ distance_line(
 	\code{\link{distance_peers}}, \code{\link{distance_point}}, \code{\link{distance_psyo}}
 }
 
-\examples{\donttest{
+\examples{\donttest{\donttest{
 # Get data
 data(psyo_rounds)
 
@@ -76,4 +76,4 @@ plot_line(finish, plot = plot)
 
 # Add distance to line to dataframe
 psyo_rounds <- distance_line(psyo_rounds,finish, TRUE)
-}}
+}}}

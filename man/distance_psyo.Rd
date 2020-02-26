@@ -50,8 +50,8 @@ distance_psyo(
 	\code{\link{distance_line}},\code{\link{distance_peers}}, \code{\link{distance_point}}
 }
 
-\examples{\donttest{
+\examples{\donttest{\donttest{
 data(psyo_rounds2)
 psyo_distance <- select_test_sample(psyo_rounds2, 5)
 psyo_distance <- distance_psyo(psyo_rounds2, psyo_rounds2)
-}}
+}}}

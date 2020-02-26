@@ -33,10 +33,10 @@ Tips to prevent common mistakes
 }
 
 \seealso{
-	\code{\link{about_analysing_tips}}, \code{\link{about_demos}}, \code{\link[base]{difftime}}, \code{\link[SDMTools]{wt.mean}}
+	\code{\link{about_analysing_tips}}, \code{\link{about_demos}}, \code{\link[base]{difftime}}, \code{\link[Hmisc]{wtd.mean}}
 }
 
-\examples{
+\examples{\donttest{
 # Example forgetting to use weighted statistics --------------------------------
 data(psyo)
 tracks <- t_speed(psyo)
@@ -49,10 +49,11 @@ sd(tracks[,c("speed")], na.rm = TRUE)
 # With weighted statistics
 des_mean(tracks, "speed", "time_difference", t_id = "")
 
-SDMTools::wt.mean(
+Hmisc::wtd.mean(
   tracks[,c("speed")], as.numeric(tracks[,c("time_difference")])
 )
-SDMTools::wt.sd(
+
+sqrt(Hmisc::wtd.var(
   tracks[,c("speed")], as.numeric(tracks[,c("time_difference")])
-)
-}
+))
+}}

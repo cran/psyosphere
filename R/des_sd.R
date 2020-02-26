@@ -60,7 +60,7 @@ sd_private <- function(tracks, ctarget, cweight, cgaps, cname, t_id) {
 
   # Calculate weighted sd
   else {
-    result <- SDMTools::wt.sd(tracks[,ctarget],tracks[,cweight])
+    result <- sqrt(Hmisc::wtd.var(tracks[,ctarget],tracks[,cweight]))
   }
 
   # Save as data frame

@@ -21,16 +21,16 @@ normal1 <- sd(mtracks$speed, na.rm = TRUE)
 mtracks2 <- mtracks
 mtracks2$time_difference <- as.numeric(mtracks2$time_difference)
 
-weighted1 <- SDMTools::wt.sd(
+weighted1 <- sqrt(Hmisc::wtd.var(
   mtracks2$speed, mtracks2$time_difference
-)
+))
 
 segmented1 <- sd(mtracks2[c(1:5,7:9),c("speed")], na.rm = TRUE)
 
-segmented_weighted1 <- SDMTools::wt.sd(
+segmented_weighted1 <- sqrt(Hmisc::wtd.var(
   mtracks2[c(1:5,7:9),c("speed")],
   mtracks2[c(1:5,7:9),c("time_difference")]
-)
+))
 
 # Caculate sd with des_sd
 normal2 <- psyosphere::des_sd(mtracks, "speed")

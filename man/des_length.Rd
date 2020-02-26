@@ -48,11 +48,11 @@ Data frame
   \code{\link{des_summary}}, \code{\link{des_duplicates}}, \code{\link{des_first}}, \code{\link{des_last}}, \code{\link{des_max}}, \code{\link{des_min}}, \code{\link{des_mean}}, \code{\link{des_sd}}, \code{\link{des_sum}}
 }
 
-\examples{
+\examples{\donttest{
 # Get data
 data(psyo_rounds2)
 tracks <- psyo_rounds2
 
 # Calculations
 descriptive <- des_length(tracks)
-}
+}}

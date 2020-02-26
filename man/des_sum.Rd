@@ -48,7 +48,7 @@ Data frame
   \code{\link{des_summary}}, \code{\link{des_duplicates}}, \code{\link{des_first}}, \code{\link{des_last}}, \code{\link{des_length}}, \code{\link{des_max}}, \code{\link{des_min}}, \code{\link{des_mean}}, \code{\link{des_sd}}
 }
 
-\examples{
+\examples{\donttest{
 # Get data
 data(psyo_rounds2)
 tracks <- psyo_rounds2
@@ -56,4 +56,4 @@ tracks <- psyo_rounds2
 # Calculations
 tracks <- t_distance(tracks)
 summary <- des_sum(tracks, "distances_in_m")
-}
+}}

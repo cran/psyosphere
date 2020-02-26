@@ -25,7 +25,7 @@ select_gaps(tracks, cgaps)
   \code{\link{mark_time_gaps}}, \code{\link{mark_speed_gaps}}, \code{\link{select_without_gaps}}
 }
 
-\examples{
+\examples{\donttest{
 # Get data
 data(psyo_rounds2)
 tracks <- psyo_rounds2
@@ -36,4 +36,4 @@ tracks <- t_time_difference(tracks)
 
 tracks <- mark_time_gaps(tracks)
 tracks <- select_gaps(tracks,"time_gap")
-}
+}}

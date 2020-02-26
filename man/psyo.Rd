@@ -35,7 +35,7 @@ The data frame should at least contain the variables mentioned above. Additional
   \code{\link{val_psyo}}
 }
 
-\examples{
+\examples{\donttest{
 # Simple example ---------------------------------------------------------------
 
 data(psyo)
@@ -89,6 +89,6 @@ psyo <- as.POSIXct(psyo$time)
 remove(id, p_id, time, lon, lat)
 
 print(psyo)
-}
+}}
 
 \keyword{datasets}

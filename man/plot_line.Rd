@@ -36,7 +36,7 @@ A \code{\link{ggmap}} object.
   \code{\link{plot_map}}, \code{\link{plot_tracks}}, \code{\link{plot_polygon}}
 }
 
-\examples{\donttest{
+\examples{\donttest{\donttest{
 finish <- data.frame(lon = c(6.851810,6.851000), lat = c(52.241800,52.240300))
 plot_line(finish)
-}}
+}}}

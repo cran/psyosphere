@@ -28,7 +28,7 @@ Benjamin Ziepert. Please send feedback to: \email{feedback-psyosphere@analyse-gp
   \code{\link{average_coordinates}}
 }
 
-\examples{
+\examples{\donttest{
 data(psyo)
 test_tracks <- select_test_sample(psyo)
-}
+}}

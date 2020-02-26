@@ -24,7 +24,7 @@ Benjamin Ziepert
   \code{\link{val_cname}},\code{\link{val_psyo}}, \code{\link{val_var}}
 }
 
-\examples{
+\examples{\donttest{
 # Create variables
 id <- 10
 name <- "test"
@@ -35,5 +35,5 @@ time <- as.POSIXct("1986-08-31 02:15:00")
 # e <- val_var(name, "logical", FALSE); if (e != "") {stop(e)} # error and warning
 e <- val_var(time, "POSIXct"); if (e != "") {stop(e)} # no error
 
-}
+}}
 

@@ -36,7 +36,7 @@ Dr. Elze Ufkes
   \code{\link{plot_line}}, \code{\link{plot_tracks}}, \code{\link{plot_polygon}}
 }
 
-\examples{\donttest{
+\examples{\donttest{\donttest{
 data(psyo)
 plot_map(psyo)
-}}
+}}}

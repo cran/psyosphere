@@ -9,7 +9,7 @@ data(psyo_rounds2)
 # Test matching time ----------------------------------------------------------
 
 # Get data
-time <- as.POSIXct("2015-09-03 13:51:07")
+time <- as.POSIXct("2015-09-03 13:51:07", tz = "MET")
 tracks <- psyo_rounds2[ psyo_rounds2[,"time"] == time, ]
 
 # Calculation

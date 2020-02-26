@@ -15,7 +15,7 @@
   \enumerate{
     \item {The file names of documentation about 'psyosphere' in general begins with "about ". Exception is the package documentation file.}
     \item {The file names cannot begin with "aa" or "ab" to prevent that they are listed before the "about" files.}.
-    \item {The file names for functions documentations are identical to the function names. Exception are private functions. See also \href{about_functions.html}{about functions}}.
+    \item {The file names for functions documentations are identical to the function names. Exception are private functions. See also \link{about functions}}.
     \item {The file name for data always begin with "psyo".}
   }
 
@@ -23,7 +23,7 @@
 
   For each documentation 2 files will be created.
   \enumerate{
-    \item {A documentation file. A file that contains the documentation for the function and has the same file name as the function file. See also: \href{about_functions.html}{about functions}.}
+    \item {A documentation file. A file that contains the documentation for the function and has the same file name as the function file. See also: \link{about functions}.}
     \item {A documentation example file. A file that contains the example code for the documentation. This file has the same file name as the function file with the prefix "man_" and is stored in the directory "code_examples/man".}
   }
 

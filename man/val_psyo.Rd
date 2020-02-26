@@ -31,7 +31,7 @@ val_psyo(tracks, id = 1, p_id = 1, time = 1, lon = 2, lat = 2)
   \code{\link{val_cname}},\code{\link{val_psyo}}, \code{\link{val_var}}
 }
 
-\examples{\donttest{
+\examples{\donttest{\donttest{
 # Produce a warning ------------------------------------------------------------
 data(psyo)
 psyo$time <- NULL # remove time column
@@ -46,4 +46,4 @@ e <- val_psyo(psyo, time = 2); if (e != "") {stop(e)}
 data(psyo)
 psyo$lon <- NULL # remove time column
 e <- val_psyo(psyo); if (e != "") {stop(e)}
-}}
+}}}

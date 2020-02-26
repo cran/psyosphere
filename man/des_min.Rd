@@ -52,7 +52,7 @@ Data frame
 }
 
 
-\examples{
+\examples{\donttest{
 data(psyo_rounds2)
 first_time <- des_min(psyo_rounds2,"time")
-}
+}}

@@ -48,7 +48,7 @@ distance_to_direct_line(
 	\code{\link{distance_line}}
 }
 
-\examples{\donttest{
+\examples{\donttest{\donttest{
 # Get data
 data(psyo_rounds2)
 
@@ -61,4 +61,4 @@ plot_line(finish, plot = plot)
 
 # Get deviation from shortest rout from begin to finish
 psyo_rounds2 <- distance_to_direct_line(psyo_rounds2, finish)
-}}
+}}}

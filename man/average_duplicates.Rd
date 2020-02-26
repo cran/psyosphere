@@ -40,7 +40,7 @@ average_duplicates(tracks, t_id = "id")
   \code{\link[geosphere]{geomean}}, \code{\link{average_coordinates}}
 }
 
-\examples{\donttest{
+\examples{\donttest{\donttest{
 # Get data
 data(psyo)
 psyo <- psyo[c(1,15),]
@@ -58,4 +58,4 @@ psyo <- average_duplicates(psyo)
 # Plot mean position
 plot + ggplot2::geom_point(data = psyo, size = 5)
 
-}}
+}}}

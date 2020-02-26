@@ -42,7 +42,7 @@ Benjamin Ziepert
   \code{\link{plot_map}}, \code{\link{plot_line}}, \code{\link{plot_polygon}}
 }
 
-\examples{\donttest{
+\examples{\donttest{\donttest{
 # Plot tracks
 data(psyo_rounds2)
 plot <- plot_tracks(psyo_rounds2)
@@ -50,4 +50,4 @@ plot
 
 # Get zoom level
 plot$zoom
-}}
+}}}

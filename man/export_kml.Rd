@@ -37,7 +37,7 @@ export_kml(tracks, t_id = "id")
   code{\link{export_gpx}}
 }
 
-\examples{
+\examples{\donttest{
 \dontrun{
 
 # Get tracks
@@ -55,4 +55,4 @@ psyo[,"file_name"] <- file.path(dir, paste0(psyo[,"track_name"], ".kml"))
 
 export_kml(psyo)
 }
-}
+}}

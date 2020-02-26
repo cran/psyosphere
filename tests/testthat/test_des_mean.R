@@ -18,6 +18,8 @@ mtracks <- psyosphere::t_speed(mtracks)
 # Calculate means
 normal1 <- mean(mtracks$speed, na.rm = TRUE)
 
+mtracks$time_difference <- as.numeric(mtracks$time_difference, units="secs")
+
 weighted1 <- stats::weighted.mean(
   mtracks$speed, mtracks$time_difference, na.rm = TRUE
 )

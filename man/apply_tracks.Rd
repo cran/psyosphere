@@ -60,7 +60,7 @@ Benjamin Ziepert
 \seealso{
   \code{\link{psyo}}, \code{\link{apply_shift}}
 }
-\examples{
+\examples{\donttest{
 # Working examples -------------------------------------------------------------
 
 # Test function for examples
@@ -104,4 +104,4 @@ psyo <- apply_tracks(
   psyo,"test_wrong(eval_track, arg1)", arg1 = psyo
 )
 
-}
+}}

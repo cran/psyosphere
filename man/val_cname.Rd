@@ -34,7 +34,7 @@ val_cname(tracks, cname, type = "", size = 0, force = 2, def = TRUE)
   \code{\link{val_cname}},\code{\link{val_psyo}}, \code{\link{val_var}}
 }
 
-\examples{\donttest{
+\examples{\donttest{\donttest{
 data(psyo)
 
 # Test t_id
@@ -60,4 +60,4 @@ e <- val_cname(t4, t_id, size = 20); if (e != "") {stop(e)}
 t5 <- psyo
 t_id <- "id"
 e <- val_cname(t5, t_id, size = "20"); if (e != "") {stop(e)}
-}}
+}}}

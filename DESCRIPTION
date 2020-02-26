@@ -1,8 +1,8 @@
 Package: psyosphere
 Type: Package
 Title: Analyse GPS Data
-Version: 0.1.4
-Date: 2018-05-03
+Version: 0.1.5
+Date: 2020-02-23
 Authors@R: c(
   person("Benjamin", "Ziepert", email  = "feedback-psyosphere@analyse-gps.com", role = c("cre", "aut")),
   person("Elze G", "Ufkes", role = "ctb"),
@@ -21,12 +21,12 @@ Description: Analyse location data such as latitude,
 Depends: R (>= 2.10)
 License: MIT + file LICENSE
 Imports: ggmap, rgdal, plyr, geosphere, ggplot2, sp, lubridate,
-        RgoogleMaps, SDMTools, stats
-RoxygenNote: 6.0.1
+        RgoogleMaps, Hmisc, stats
+RoxygenNote: 7.0.0
 NeedsCompilation: no
-Packaged: 2018-05-03 10:48:33 UTC; micro
+Packaged: 2020-02-23 19:48:28 UTC; micro
 Author: Benjamin Ziepert [cre, aut],
   Elze G Ufkes [ctb],
   Peter W de Vries [ctb]
 Repository: CRAN
-Date/Publication: 2018-05-03 11:38:56 UTC
+Date/Publication: 2020-02-26 13:10:02 UTC

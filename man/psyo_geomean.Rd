@@ -29,7 +29,7 @@ Data set in the \code{\link{psyo}} format.
   \code{\link{val_psyo}}
 }
 
-\examples{
+\examples{\donttest{
 
 # Simple example ---------------------------------------------------------------
 
@@ -38,6 +38,6 @@ data("psyo_geomean")
 compressed_tracks <- average_coordinates(psyo_geomean,
                                                              30,
                                                              "seconds")
-}
+}}
 
 \keyword{datasets}

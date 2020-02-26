@@ -46,7 +46,7 @@ t_bearing(
   \code{\link[geosphere]{bearing}}, \code{\link{t_distance}}, \code{\link{t_speed}}, \code{\link{t_time_difference}}
 }
 
-\examples{
+\examples{\donttest{
 data(psyo)
 psyo <- t_bearing(psyo)
-}
+}}

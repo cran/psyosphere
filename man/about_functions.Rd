@@ -58,7 +58,7 @@
   For each function 4 different files will be created.
   \enumerate{
     \item {A function file. A file that contains the functions itself.}
-    \item {A documentation file. A file that contains the documentation for the function and has the same file name as the function file. See also: \href{about_documentation.html}{about documentation}.}
+    \item {A documentation file. A file that contains the documentation for the function and has the same file name as the function file. See also: \link{about documentation}.}
     \item {A documentation example file. A file that contains the example code for the documentation. This file has the same file name as the function file with the prefix "man_" and is stored in the directory "code_examples/man".}
     \item {A test file. A file that contains the test code for the package test. This file has the same file name as the function file with the prefix "test_" and is stored in the directory "tests/testthat".}
   }
@@ -78,7 +78,7 @@
   Benjamin Ziepert. Please send feedback to: \email{feedback-psyosphere@analyse-gps.com}.
 }
 
-\examples{
+\examples{\donttest{
 # ------------------------------------------------------------------------------
 # Example calculation R file ---------------------------------------------------
 # ------------------------------------------------------------------------------
@@ -146,4 +146,4 @@ tracks <- psyo_rounds2
 # val_psyo(________)
 # test_sum <- sum(____)
 # if (round(test_sum,3) != round(____,3)) {stop("Wrong test_sum")}
-}
+}}

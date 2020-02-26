@@ -40,7 +40,7 @@ You can find more information about the experiments on [analyse-gps.com](https:/
   Benjamin Ziepert. Please send feedback to: \email{feedback-psyosphere@analyse-gps.com}.
 }
 
-\examples{\donttest{
+\examples{\donttest{\donttest{
 # Get a list of the demo's
 demo(package = "psyosphere")
 
@@ -60,4 +60,4 @@ dir <- paste0(demo_dir,"/leadership1/")
 # Clean environment and load data (see top of each section)
 rm(list=setdiff(ls(), "dir"))
 load(paste0(dir,"rdata/01.RData"))
-}}
+}}}

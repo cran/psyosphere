@@ -50,8 +50,8 @@ Benjamin Ziepert
   \code{\link{dir_get_gpx}}
 }
 
-\examples{
+\examples{\donttest{
 data(psyo)
 csv_dir <- system.file("extdata", "ids.csv", package = "psyosphere")
 psyo <- dir_add_csv(psyo, csv_dir)
-}
+}}

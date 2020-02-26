@@ -35,7 +35,7 @@ export_gpx(tracks, t_id = "id")
   code{\link{export_kml}}
 }
 
-\examples{
+\examples{\donttest{
 \dontrun{
 
 # Get tracks
@@ -51,8 +51,4 @@ psyo[,"file_name"] <- file.path(dir, psyo[,"track_name"])
 # Export files
 
 export_gpx(tracks = psyo)
-}
-}
-
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+}}}

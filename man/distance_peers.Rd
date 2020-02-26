@@ -59,7 +59,7 @@ distance_peers(
 	\code{\link{distance_line}}, \code{\link{distance_point}}, \code{\link{distance_psyo}}
 }
 
-\examples{\donttest{
+\examples{\donttest{\donttest{
 # Simple example ---------------------------------------------------------------
 data(psyo_rounds2)
 time <- as.POSIXct("2015-09-03 13:51:07")
@@ -102,5 +102,5 @@ plot_tracks(x, plot = plot)
 
 # Get distances
 tracks <- distance_peers(tracks)
-}}
+}}}
 

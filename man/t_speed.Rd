@@ -43,7 +43,7 @@ For the last coordinate within a track the function returns \code{NA} because th
   \code{\link{t_bearing}},\code{\link{t_distance}}, \code{\link{t_time_difference}}
 }
 
-\examples{
+\examples{\donttest{
 data(psyo)
 psyo <- t_speed(psyo)
-}
+}}

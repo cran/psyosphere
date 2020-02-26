@@ -50,7 +50,7 @@ Data frame
   \code{\link{des_summary}}, \code{\link{des_duplicates}}, \code{\link{des_first}}, \code{\link{des_last}}, \code{\link{des_length}}, \code{\link{des_max}}, \code{\link{des_min}}, \code{\link{des_mean}}, \code{\link{des_sum}}
 }
 
-\examples{
+\examples{\donttest{
 # Get example data
 data(psyo_rounds2)
 psyo_rounds2 <- psyo_rounds2[ c(1:5,11:15) ,]
@@ -83,4 +83,4 @@ segmented_weighted <- des_sd(
   cgaps = "time_gap",
   cname = "segmented_weighted"
 )
-}
+}}

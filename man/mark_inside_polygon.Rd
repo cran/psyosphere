@@ -45,7 +45,7 @@ mark_inside_polygon(
 	\code{\link[sp]{point.in.polygon}}
 }
 
-\examples{\donttest{
+\examples{\donttest{\donttest{
 # Create polygon
 lon <- c(4.92, 4.93, 4.93, 4.92, 4.92)
 lat <- c(52.311, 52.311, 52.308, 52.308, 52.311)
@@ -67,4 +67,4 @@ psyo <- mark_inside_polygon(psyo, poly)
 in_poly <- psyo[ psyo[,"in_polygon"] != 0,]
 in_poly[,"dot_color"] <- "red"
 plot_tracks(in_poly, plot = plot)
-}}
+}}}

@@ -46,7 +46,7 @@ distance_point(
 	\code{\link{distance_line}},\code{\link{distance_peers}}, \code{\link{distance_psyo}}
 }
 
-\examples{
+\examples{\donttest{
 data(psyo)
 
 # Un-named list
@@ -59,4 +59,4 @@ distance_point(psyo[1,], point, bind = FALSE)
 
 # Multiple distance to point
 coordinates <- distance_point(psyo, point)
-}
+}}

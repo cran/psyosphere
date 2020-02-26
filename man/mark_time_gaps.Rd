@@ -50,7 +50,7 @@ mark_time_gaps(
   \code{\link{mark_gap_segments}}, \code{\link{mark_speed_gaps}}, \code{\link{select_gaps}}
 }
 
-\examples{
+\examples{\donttest{
 # Get example data
 data(psyo_rounds2)
 
@@ -63,4 +63,4 @@ psyo_rounds2 <- mark_time_gaps(psyo_rounds2)
 
 # Check result
 psyo_rounds2 <- psyo_rounds2[ which(psyo_rounds2[,"time_gap"]) ,]
-}
+}}

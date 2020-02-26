@@ -47,7 +47,7 @@ apply_shift(tracks, factor = 1, bind = TRUE, csubset = "", t_id = "id")
   \code{\link{psyo}},\code{\link{apply_tracks}}
 }
 
-\examples{
+\examples{\donttest{
 data(psyo)
 apply_shift(psyo, csubset = c("lon", "lat"))
-}
+}}
