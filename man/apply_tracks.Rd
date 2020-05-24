@@ -60,7 +60,7 @@ Benjamin Ziepert
 \seealso{
   \code{\link{psyo}}, \code{\link{apply_shift}}
 }
-\examples{\donttest{
+\examples{\dontrun{
 # Working examples -------------------------------------------------------------
 
 # Test function for examples

@@ -49,7 +49,7 @@ Data frame
   \code{\link{des_summary}}, \code{\link{des_first}}, \code{\link{des_last}}, \code{\link{des_length}}, \code{\link{des_max}}, \code{\link{des_min}}, \code{\link{des_mean}}, \code{\link{des_sd}}, \code{\link{des_sum}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 # Get data
 data(psyo_rounds2)
 tracks <- psyo_rounds2

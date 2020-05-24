@@ -34,7 +34,7 @@ val_cname(tracks, cname, type = "", size = 0, force = 2, def = TRUE)
   \code{\link{val_cname}},\code{\link{val_psyo}}, \code{\link{val_var}}
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 data(psyo)
 
 # Test t_id

@@ -128,14 +128,14 @@ plot_tracks_private <- function(
     plot <- plot_coordinates_private(plot, gpx_data)
   }
 
-  # Add plot labels
-  plot_label <- plot_labels_private(gpx_data, t_id, zoom)
-  plot <- plot + ggplot2::geom_label(
-    hjust = 0,
-    vjust = 1,
-    label = plot_label,
-    alpha = 0.5
-  )
+  # # Add plot labels
+  # plot_label <- plot_labels_private(gpx_data, t_id, zoom)
+  # plot <- plot + ggplot2::geom_label(
+  #   hjust = 0,
+  #   vjust = 1,
+  #   label = plot_label,
+  #   alpha = 0.5
+  # )
 
   # Display plot and Wait
   if (single) {

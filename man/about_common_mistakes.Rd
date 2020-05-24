@@ -36,7 +36,7 @@ Tips to prevent common mistakes
 	\code{\link{about_analysing_tips}}, \code{\link{about_demos}}, \code{\link[base]{difftime}}, \code{\link[Hmisc]{wtd.mean}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 # Example forgetting to use weighted statistics --------------------------------
 data(psyo)
 tracks <- t_speed(psyo)

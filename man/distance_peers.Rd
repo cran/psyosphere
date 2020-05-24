@@ -59,7 +59,7 @@ distance_peers(
 	\code{\link{distance_line}}, \code{\link{distance_point}}, \code{\link{distance_psyo}}
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 # Simple example ---------------------------------------------------------------
 data(psyo_rounds2)
 time <- as.POSIXct("2015-09-03 13:51:07")

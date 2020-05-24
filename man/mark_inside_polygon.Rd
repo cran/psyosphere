@@ -45,7 +45,7 @@ mark_inside_polygon(
 	\code{\link[sp]{point.in.polygon}}
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 # Create polygon
 lon <- c(4.92, 4.93, 4.93, 4.92, 4.92)
 lat <- c(52.311, 52.311, 52.308, 52.308, 52.311)

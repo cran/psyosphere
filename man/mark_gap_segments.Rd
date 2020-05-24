@@ -46,7 +46,7 @@ mark_gap_segments(
   \code{\link{mark_speed_gaps}}, \code{\link{mark_time_gaps}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 data(psyo_rounds2)
 psyo_rounds2 <- average_duplicates(psyo_rounds2)
 psyo_rounds2 <- t_time_difference(psyo_rounds2)

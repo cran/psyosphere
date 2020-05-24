@@ -18,13 +18,13 @@ plot_map(
 
 \arguments{
   \item{tracks}{\code{\link{psyo}}. Data frame with tracks.}
-  \item{zoom}{\emph{numeric}. Zoom level. -1 for auto zoom or from 3 (continent) to 21 (building). See also \code{\link[ggmap]{get_map}}.}
-  \item{maptype}{\code{character}. See \code{\link[ggmap]{get_googlemap}}.}
-  \item{extent}{\code{character}. See \code{\link[ggmap]{ggmap}}.}
+  \item{zoom}{\emph{numeric}. Zoom level. -1 for auto zoom or from 3 (continent) to 21 (building). See also ggmap::get_map.}
+  \item{maptype}{\code{character}. See ggmap::get_googlemap.}
+  \item{extent}{\code{character}. See ggmap::ggmap.}
 }
 
 \value{
-  A \code{\link[ggmap]{ggmap}} object.
+  A ggmap object.
 }
 
 \author{
@@ -36,7 +36,7 @@ Dr. Elze Ufkes
   \code{\link{plot_line}}, \code{\link{plot_tracks}}, \code{\link{plot_polygon}}
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 data(psyo)
 plot_map(psyo)
 }}}

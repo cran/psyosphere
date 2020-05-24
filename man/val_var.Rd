@@ -24,7 +24,7 @@ Benjamin Ziepert
   \code{\link{val_cname}},\code{\link{val_psyo}}, \code{\link{val_var}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 # Create variables
 id <- 10
 name <- "test"

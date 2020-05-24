@@ -46,7 +46,7 @@ distance_point(
 	\code{\link{distance_line}},\code{\link{distance_peers}}, \code{\link{distance_psyo}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 data(psyo)
 
 # Un-named list

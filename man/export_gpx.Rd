@@ -35,7 +35,7 @@ export_gpx(tracks, t_id = "id")
   code{\link{export_kml}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 \dontrun{
 
 # Get tracks

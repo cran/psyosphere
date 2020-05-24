@@ -40,7 +40,7 @@ The following image shows a track after selection with 3 rounds.
 Benjamin Ziepert. Please send feedback to: \email{feedback-psyosphere@analyse-gps.com}.
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 # Create polygons
 lon <- c(6.849975, 6.849627, 6.850001, 6.850350, 6.849975)
 lat <- c(52.241745, 52.241100, 52.241004, 52.241649, 52.241745)

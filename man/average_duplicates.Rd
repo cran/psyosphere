@@ -40,7 +40,7 @@ average_duplicates(tracks, t_id = "id")
   \code{\link[geosphere]{geomean}}, \code{\link{average_coordinates}}
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 # Get data
 data(psyo)
 psyo <- psyo[c(1,15),]

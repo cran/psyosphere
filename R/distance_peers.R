@@ -360,7 +360,7 @@ gpx_data_frame_private <- function(
 {
 
   # Create data frame
-  data <- data.frame(id, lon, lat, ele, time, stringsAsFactors = FALSE)
+  data <- data.frame(id, lon, lat, ele, time)
 
   # Add an empty row
   if (nrow(data) == 0) {

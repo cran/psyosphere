@@ -13,14 +13,39 @@ plot_map <- function(
   geomean <- geomedian_private(tracks) # map center
   zoom <- get_zoom_private(tracks, zoom) # zoom factor
 
-  # Get map
-  plot <- ggmap::get_googlemap(
-    center = c(lon = geomean$lon, lat = geomean$lat),
-    zoom = zoom,
-    maptype = c("terrain")
-  )
-  plot <- ggmap::ggmap(plot)
-  plot$zoom <- zoom
+  # GGMAP seems to be orphaned. Therefore, ggmap is moved into suggests.
+  if (requireNamespace("ggmap", quietly=TRUE)) {
+
+    # Get map with ggmap
+    plot <- ggmap::get_googlemap(
+      center = c(lon = geomean$lon, lat = geomean$lat),
+      zoom = zoom,
+      maptype = c("terrain")
+    )
+    plot <- ggmap::ggmap(plot)
+    plot$zoom <- zoom
+
+  } else {
+
+    cat("\n\nInstall package ggmap with Google API key to display map.\n\n")
+
+    # CRAN ggplot2 workaround
+    lon <- lat <- NULL
+
+    # # Get dummy map
+    box <- get_bounding_box_private(tracks)
+    plot <- ggplot2::ggplot(box) + ggplot2::aes(x = lon, y = lat)
+    plot$zoom <- zoom
+
+    # # Get map with OpenStreetMap
+    # box <- get_bounding_box_private(tracks)
+    # upperLeft <- c(box[1,2], box[1,1])
+    # lowerRight <- c(box[2,2], box[2,1])
+    # map <- OpenStreetMap::openmap(upperLeft, lowerRight)
+    # plot <- OpenStreetMap::autoplot.OpenStreetMap(map)
+    # plot$zoom <- zoom
+
+  }
 
   # Return result
   return(plot)

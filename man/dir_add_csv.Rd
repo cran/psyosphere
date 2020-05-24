@@ -12,7 +12,7 @@ Read CSV file in directory and bind data to a data frame.
 
 \usage{
 dir_add_csv(
-  tracks, dir, merge_by = "id", stringsAsFactors = default.stringsAsFactors()
+  tracks, dir, merge_by = "id"
 )
 }
 
@@ -20,7 +20,6 @@ dir_add_csv(
   \item{tracks}{\code{\link{psyo}}. Data frame with tracks.}
   \item{dir}{The path to the CSV file.}
   \item{merge_by}{The column in the \emph{data_frame} and the CSV file that is used to merge the data.}
-  \item{stringsAsFactors}{\emph{logical}. Should character vectors be converted to factors.}
 }
 
 \value{
@@ -50,7 +49,7 @@ Benjamin Ziepert
   \code{\link{dir_get_gpx}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 data(psyo)
 csv_dir <- system.file("extdata", "ids.csv", package = "psyosphere")
 psyo <- dir_add_csv(psyo, csv_dir)

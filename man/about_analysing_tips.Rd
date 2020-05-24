@@ -53,7 +53,7 @@ Guide how to analyse GPS data
 	\code{\link{about_common_mistakes}}, \code{\link{about_demos}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 # Remove data before begin and after end ---------------------------------------
 data(psyo_rounds2)
 tracks <- psyo_rounds2

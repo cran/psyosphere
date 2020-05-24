@@ -29,7 +29,7 @@ Data set in the \code{\link{psyo}} format.
   \code{\link{val_psyo}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 
 # Simple example ---------------------------------------------------------------
 

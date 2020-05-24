@@ -48,7 +48,7 @@ distance_to_direct_line(
 	\code{\link{distance_line}}
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 # Get data
 data(psyo_rounds2)
 

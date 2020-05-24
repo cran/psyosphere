@@ -78,7 +78,7 @@
   Benjamin Ziepert. Please send feedback to: \email{feedback-psyosphere@analyse-gps.com}.
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 # ------------------------------------------------------------------------------
 # Example calculation R file ---------------------------------------------------
 # ------------------------------------------------------------------------------

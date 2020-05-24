@@ -33,7 +33,7 @@ GPS example with 3 selected rounds in \code{\link{psyo}} format.
   \code{\link{val_psyo}}
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 data(psyo_rounds2)
 plot_tracks(psyo_rounds2, t_id = "")
 }}}

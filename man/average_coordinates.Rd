@@ -52,7 +52,7 @@ The average for the columns time, lon and lat is calculated. See \code{\link[geo
   \code{\link[geosphere]{geomean}}, \code{\link{average_duplicates}}, \code{\link{select_test_sample}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 data(psyo_geomean)
 average_coordinates(psyo_geomean,30,"seconds")
 }}

@@ -40,7 +40,7 @@ You can find more information about the experiments on [analyse-gps.com](https:/
   Benjamin Ziepert. Please send feedback to: \email{feedback-psyosphere@analyse-gps.com}.
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 # Get a list of the demo's
 demo(package = "psyosphere")
 

@@ -50,7 +50,7 @@ mark_time_gaps(
   \code{\link{mark_gap_segments}}, \code{\link{mark_speed_gaps}}, \code{\link{select_gaps}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 # Get example data
 data(psyo_rounds2)
 

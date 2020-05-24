@@ -44,7 +44,7 @@ unzip(paste0(p_dir, "/gps_files.zip"), exdir = paste0(p_dir, "/gpx"))
 remove(url)
 
 # Save GPS files with participant movement as dataframe
-tracks <- dir_get_gpx(paste0(p_dir, "/gpx"), stringsAsFactors = FALSE)
+tracks <- dir_get_gpx(paste0(p_dir, "/gpx"))
 
 save(list = setdiff(ls(), "p_dir"), file = paste0(p_dir, "/rdata/01.RData"))
 
@@ -57,7 +57,7 @@ rm(list = setdiff(ls(), "p_dir"))
 load(paste0(p_dir, "/rdata/01.RData"))
 
 tracks <- dir_add_csv(
-  tracks, paste0(p_dir, "/gpx/ids.csv"), stringsAsFactors = FALSE
+  tracks, paste0(p_dir, "/gpx/ids.csv")
 )
 
 # Get first descriptives

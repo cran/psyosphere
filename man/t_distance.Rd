@@ -44,7 +44,7 @@ t_distance(
   \code{\link[geosphere]{distHaversine}}, \code{\link{t_bearing}}, \code{\link{t_speed}}, \code{\link{t_time_difference}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 data(psyo)
 psyo <- t_distance(psyo)
 }}

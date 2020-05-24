@@ -32,7 +32,7 @@ GPS example of walking in circles in \code{\link{psyo}} format.
   \code{\link{val_psyo}}
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 data(psyo_rounds)
 plot_tracks(psyo_rounds, t_id = "")
 }}}

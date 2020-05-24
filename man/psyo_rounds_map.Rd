@@ -18,7 +18,7 @@ Google map as ggplot object
 See \code{\link[ggplot2]{ggplot}}
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 data(psyo_rounds_map)
 plot(psyo_rounds_map)
 }}}

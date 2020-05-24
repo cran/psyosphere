@@ -11,13 +11,12 @@ Read GPX files from directory into data frame.
 }
 
 \usage{
-dir_get_gpx(dir, tz = "", stringsAsFactors = default.stringsAsFactors())
+dir_get_gpx(dir, tz = "")
 }
 
 \arguments{
   \item{dir}{\emph{character}. The directory of the GPX files relative to the working directory.}
   \item{tz}{\emph{character}. The time zone for the time stamp of the coordinates.}
-  \item{stringsAsFactors}{\emph{logical}. Should character vectors be converted to factors.}
 }
 
 \details{
@@ -46,7 +45,7 @@ Dr. Elze Ufkes
   \code{\link{dir_add_csv}}, \link[base]{timezones}
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 gpx_dir <- system.file("extdata", package="psyosphere")
 psyo_rounds <- dir_get_gpx(gpx_dir, tz="MET")
 }}}

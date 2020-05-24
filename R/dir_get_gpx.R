@@ -1,6 +1,6 @@
 
 dir_get_gpx <- function(
-  dir, tz = "", stringsAsFactors = default.stringsAsFactors()
+  dir, tz = ""
 ) {
 
   # Check if dir exists
@@ -21,7 +21,7 @@ dir_get_gpx <- function(
   for (i in 1:NROW(gpx_file_names)) {
 
     file_name <- gpx_file_names[i]
-    iteration <- read_gpx_file_private(file_name, tz, stringsAsFactors)
+    iteration <- read_gpx_file_private(file_name, tz)
 
     if (i == 1) {
       tracks <- iteration
@@ -36,14 +36,14 @@ dir_get_gpx <- function(
 
 }
 
-read_gpx_file_private <- function(file_name, tz, stringsAsFactors) {
+read_gpx_file_private <- function(file_name, tz) {
 
   # Extract layers from gpx file
   layers <- rgdal::ogrListLayers(file_name)
 
   # Read layer 5 from gpx file
   gpx <- rgdal::readOGR(
-    file_name, layer = layers[5], stringsAsFactors = stringsAsFactors
+    file_name, layer = layers[5]
   )
 
   # add filename withouth path as id variable
@@ -56,7 +56,7 @@ read_gpx_file_private <- function(file_name, tz, stringsAsFactors) {
 
   # Save as data frame
   tracks <- data.frame(
-    id, p_id, time, lon, lat, ele, stringsAsFactors = stringsAsFactors
+    id, p_id, time, lon, lat, ele
   )
 
   tracks$time <- as.POSIXct(tracks$time, tz = tz)

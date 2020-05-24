@@ -35,7 +35,7 @@ The data frame should at least contain the variables mentioned above. Additional
   \code{\link{val_psyo}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 # Simple example ---------------------------------------------------------------
 
 data(psyo)

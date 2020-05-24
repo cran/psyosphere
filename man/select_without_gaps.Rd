@@ -27,7 +27,7 @@ select_without_gaps(tracks, cgaps)
   \code{\link{mark_time_gaps}}, \code{\link{mark_speed_gaps}}, \code{\link{select_gaps}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 # Get data
 data(psyo_rounds2)
 tracks <- psyo_rounds2

@@ -31,7 +31,7 @@ val_psyo(tracks, id = 1, p_id = 1, time = 1, lon = 2, lat = 2)
   \code{\link{val_cname}},\code{\link{val_psyo}}, \code{\link{val_var}}
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 # Produce a warning ------------------------------------------------------------
 data(psyo)
 psyo$time <- NULL # remove time column

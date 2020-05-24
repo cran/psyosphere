@@ -1,5 +1,5 @@
 dir_add_csv <- function(
-  tracks, dir, merge_by = "id", stringsAsFactors = default.stringsAsFactors()
+  tracks, dir, merge_by = "id"
 ) {
 
   # Check variables
@@ -10,7 +10,7 @@ dir_add_csv <- function(
   # Read CSV file
   id_info <- utils::read.csv(
     file = dir, header = TRUE, sep = ";", quote = "\"", dec = ".", fill = TRUE,
-    comment.char = "", stringsAsFactors = stringsAsFactors
+    comment.char = ""
   )
 
   # Check if tracks exist but have no information in the CSV file

@@ -42,7 +42,7 @@ t_time_difference(
 	\code{\link[base]{difftime}}, \code{\link{t_bearing}},\code{\link{t_distance}}, \code{\link{t_speed}}
 }
 
-\examples{\donttest{
+\examples{\dontrun{
 data(psyo)
 t_time_difference(psyo, units = "secs")
 }}

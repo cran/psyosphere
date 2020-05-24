@@ -7,7 +7,7 @@ Plot line on map
 }
 
 \description{
-Adds a line to an existing \code{\link{ggmap}} object.
+Adds a line to an existing ggmap object.
 }
 
 \usage{
@@ -20,12 +20,12 @@ plot_line(
   \item{line}{\emph{list}. A list with the column lon (\emph{numeric}) and lat (\emph{numeric}).}
   \item{colour}{\emph{character}. Colour of the line.}
   \item{size}{\emph{numeric}. Thickness of the line.}
-  \item{plot}{\code{\link{ggmap}}. An existing map / plot where the tracks are added. If no plot is provided a Google map will be downloaded.}
-  \item{zoom}{\emph{numeric}. Zoom factor of the map. See \code{\link[ggmap]{get_googlemap}.}}
+  \item{plot}{ggmap. An existing map / plot where the tracks are added. If no plot is provided a Google map will be downloaded.}
+  \item{zoom}{\emph{numeric}. Zoom factor of the map. See ggmap::get_googlemap.}
 }
 
 \value{
-A \code{\link{ggmap}} object.
+A ggmap object.
 }
 
 \author{
@@ -36,7 +36,7 @@ A \code{\link{ggmap}} object.
   \code{\link{plot_map}}, \code{\link{plot_tracks}}, \code{\link{plot_polygon}}
 }
 
-\examples{\donttest{\donttest{
+\examples{\dontrun{\dontrun{
 finish <- data.frame(lon = c(6.851810,6.851000), lat = c(52.241800,52.240300))
 plot_line(finish)
 }}}
